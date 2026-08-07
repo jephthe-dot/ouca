@@ -34,11 +34,11 @@ jobs:
       - name: Rendre gradlew exécutable
         run: chmod +x android/gradlew
 
-      - name: Compiler l'APK debug
-        run: cd android && ./gradlew assembleDebug --no-daemon
+      - name: Compiler l'APK release (JS embarqué, installable seul)
+        run: cd android && ./gradlew assembleRelease --no-daemon
 
       - name: Publier l'APK comme fichier téléchargeable
         uses: actions/upload-artifact@v4
         with:
-          name: ouca-app-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: ouca-app-release-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
