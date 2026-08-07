@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "ouca-app",
+    "slug": "ouca-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.jephthe.oucaapp",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Oùça a besoin du micro pour transcrire ce que tu dis.",
+          "speechRecognitionPermission": "Oùça a besoin de la reconnaissance vocale pour transcrire ce que tu dis.",
+          "androidSpeechServicePackages": ["com.google.android.googlequicksearchbox"]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Oùça a besoin d'accéder à tes photos pour illustrer un objet.",
+          "cameraPermission": "Oùça a besoin de la caméra pour prendre une photo d'un objet."
+        }
+      ]
+    ]
+  }
+}
